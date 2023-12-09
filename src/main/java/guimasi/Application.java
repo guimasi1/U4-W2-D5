@@ -6,6 +6,7 @@ import guimasi.entities.*;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class Application {
@@ -56,10 +57,16 @@ public class Application {
 
         newLibrary.searchByAuthor("bello");
 
-        newLibrary.saveOnDisc();
+        // newLibrary.saveOnDisc();
+        // newLibrary.readFile();
+        /*newLibrary.loadInLibrary();*/
 
-        newLibrary.readFile();
-        newLibrary.loadInLibrary();
+        Map<Integer,List<PaperElement>> elementsByYear = newLibrary.collectByYear();
+        System.out.println(elementsByYear);
+        Map<String, List<PaperElement>> booksByGenre = newLibrary.collectByGenre();
+        System.out.println(booksByGenre);
+        Map<Periodicity, List<PaperElement>> magazinezByGenre = newLibrary.collectByPeriodicity();
+        System.out.println(magazinezByGenre);
         }
 
     }

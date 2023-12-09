@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="924e8964-1c97-4ab2-8823-86b3d56056b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guimasi/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guimasi/entities/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guimasi/entities/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guimasi/entities/Magazine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guimasi/entities/PaperElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guimasi/entities/Periodicity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/guimasi/ApplicationTest.java" afterDir="false" />
+    <list default="true" id="924e8964-1c97-4ab2-8823-86b3d56056b6" name="Changes" comment="Project completed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guimasi/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guimasi/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/guimasi/entities/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guimasi/entities/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +52,20 @@
       <option name="presentableId" value="Default" />
       <updated>1702036859412</updated>
     </task>
+    <task id="LOCAL-00001" summary="Project completed">
+      <option name="closed" value="true" />
+      <created>1702126907937</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702126907937</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,11 +3,9 @@ package guimasi.entities;
 
 import org.apache.commons.io.FileUtils;
 
-import java.awt.print.Paper;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.time.Period;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -143,6 +141,21 @@ public class Library {
         System.out.println("libri che sono sul file book_archive.txt: " + books);
         System.out.println("Riviste che sono sul file magazine_archive.txt: " + magazines);
     }
+
+    public Map<Integer, List<PaperElement>> collectByYear () {
+        return this.Library.stream().collect(Collectors.groupingBy(PaperElement::getYear));
+    }
+
+    public Map<String, List<PaperElement>> collectByGenre () {
+        return this.Library.stream().filter(element -> element instanceof Book)
+                .collect(Collectors.groupingBy( book -> ((Book) book).getGenre()));
+    }
+
+    public Map<Periodicity, List<PaperElement>> collectByPeriodicity () {
+        return this.Library.stream().filter(element -> element instanceof Magazine)
+                .collect(Collectors.groupingBy( magazine -> ((Magazine) magazine).getPeriodicity()));
+    }
+
 
     @Override
     public String toString() {
