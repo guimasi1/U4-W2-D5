@@ -56,9 +56,14 @@ public class Library {
 
         if(this.Library.stream().anyMatch(element -> element instanceof Book)) {
             List<PaperElement> books = this.Library.stream().filter(element -> element instanceof Book).toList();
-            List<PaperElement> booksByAuthor = books.stream().filter(book -> Objects.equals(((Book) book).getAuthor(), author)).toList();
+            List<PaperElement> booksByAuthor = books.stream().filter(book -> ((Book) book).getAuthor().equals(author)).toList();
             System.out.println(booksByAuthor);
         }
+    }
+
+    public void searchByTitle(String title) {
+        List<PaperElement> booksByTitle = this.Library.stream().filter(element -> element.getTitle().contains(title)).toList();
+        System.out.println("Libri con '" + title + "' nel titolo: " + booksByTitle);
     }
 
     public void saveOnDisc() {
@@ -152,6 +157,11 @@ public class Library {
                 .collect(Collectors.groupingBy( book -> ((Book) book).getGenre()));
     }
 
+    public Map<String, List<PaperElement>> collectByAuthor () {
+        return this.Library.stream().filter(element -> element instanceof Book)
+                .collect(Collectors.groupingBy(book -> ((Book) book).getAuthor()));
+    }
+
     public Map<Periodicity, List<PaperElement>> collectByPeriodicity () {
         return this.Library.stream().filter(element -> element instanceof Magazine)
                 .collect(Collectors.groupingBy( magazine -> ((Magazine) magazine).getPeriodicity()));
@@ -176,6 +186,11 @@ public class Library {
         System.out.println("Totale delle pagine di tutti gli elementi:");
         return this.Library.stream().mapToInt(PaperElement::getNumberOfPages).sum();
 
+    }
+
+    public List<PaperElement> orderByNumberOfPages () {
+        System.out.println("Ordinati in base al numero di pagine:");
+        return this.Library.stream().sorted(Comparator.comparing(PaperElement::getNumberOfPages).reversed()).toList();
     }
 
 

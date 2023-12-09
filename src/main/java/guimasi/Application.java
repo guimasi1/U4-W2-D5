@@ -36,8 +36,18 @@ public class Application {
             Magazine magazine = new Magazine(faker.educator().course(), randomYear, periodicity);
             magazines.add(magazine);
         }
-        Book book = new Book("prova", 2022, "bello", "hey");
+        Book book = new Book("prova", 2022, "Geronimo Stilton", "Fiction");
+        Book book1 = new Book("Il forno scomparso", 2022, "Geronimo Stilton", "Fiction");
+        Book book2 = new Book("Il forno", 2022, "Geronimo Stilton", "Fiction");
+        Book book3 = new Book("Il forno2", 2021, "Geronimo Stilton", "Fiction");
+        Book book4 = new Book("Il forno3", 2021, "Geronimo Stilton", "Fiction");
+        books.add(book);
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        books.add(book4);
         Library newLibrary = new Library(books);
+
         newLibrary.addListOfElements(magazines);
         System.out.println(newLibrary.toString());
 
@@ -71,6 +81,10 @@ public class Application {
         System.out.println(newLibrary.sortByMoreRecentElement());
         System.out.println(newLibrary.sortByAlphabeticalOrder());
         System.out.println(newLibrary.totalPages());
+        newLibrary.searchByTitle("the");
+        System.out.println(newLibrary.orderByNumberOfPages());
+        System.out.println(newLibrary.collectByAuthor());
+
     }
 }
 

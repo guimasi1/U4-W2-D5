@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="924e8964-1c97-4ab2-8823-86b3d56056b6" name="Changes" comment="Adds methods in Library class">
+    <list default="true" id="924e8964-1c97-4ab2-8823-86b3d56056b6" name="Changes" comment="Adds sort methods, total pages in Library class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/guimasi/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guimasi/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/guimasi/entities/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guimasi/entities/Library.java" afterDir="false" />
@@ -68,13 +68,22 @@
       <option name="project" value="LOCAL" />
       <updated>1702128463897</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adds sort methods, total pages in Library class">
+      <option name="closed" value="true" />
+      <created>1702131403757</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702131403757</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project completed" />
     <MESSAGE value="Adds methods in Library class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds methods in Library class" />
+    <MESSAGE value="Adds sort methods, total pages in Library class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds sort methods, total pages in Library class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
