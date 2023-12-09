@@ -20,24 +20,24 @@ public class Application {
         List<PaperElement> magazines = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
-            int randomYear = random.nextInt(1930,2024);
-            Book book = new Book(faker.book().title(),randomYear,faker.book().author(),faker.book().genre());
+            int randomYear = random.nextInt(1930, 2024);
+            Book book = new Book(faker.book().title(), randomYear, faker.book().author(), faker.book().genre());
             books.add(book);
             int randomYear2 = random.nextInt(1980, 2024);
             Periodicity periodicity1 = Periodicity.WEEKLY;
             Periodicity periodicity2 = Periodicity.MONTHLY;
             Periodicity periodicity3 = Periodicity.HALFYEARLY;
-            int number = random.nextInt(1,4);
+            int number = random.nextInt(1, 4);
             Periodicity periodicity = Periodicity.WEEKLY;
             if (number == 1) periodicity = periodicity1;
             if (number == 2) periodicity = periodicity2;
-            if(number == 3) periodicity = periodicity3;
+            if (number == 3) periodicity = periodicity3;
 
             Magazine magazine = new Magazine(faker.educator().course(), randomYear, periodicity);
             magazines.add(magazine);
-            }
-        Book book = new Book("prova", 2022,"bello","hey");
-        Library newLibrary =  new Library(books);
+        }
+        Book book = new Book("prova", 2022, "bello", "hey");
+        Library newLibrary = new Library(books);
         newLibrary.addListOfElements(magazines);
         System.out.println(newLibrary.toString());
 
@@ -61,15 +61,18 @@ public class Application {
         // newLibrary.readFile();
         /*newLibrary.loadInLibrary();*/
 
-        Map<Integer,List<PaperElement>> elementsByYear = newLibrary.collectByYear();
+        Map<Integer, List<PaperElement>> elementsByYear = newLibrary.collectByYear();
         System.out.println(elementsByYear);
         Map<String, List<PaperElement>> booksByGenre = newLibrary.collectByGenre();
         System.out.println(booksByGenre);
         Map<Periodicity, List<PaperElement>> magazinezByGenre = newLibrary.collectByPeriodicity();
         System.out.println(magazinezByGenre);
-        }
-
+        System.out.println(newLibrary.sortByOldestElement());
+        System.out.println(newLibrary.sortByMoreRecentElement());
+        System.out.println(newLibrary.sortByAlphabeticalOrder());
+        System.out.println(newLibrary.totalPages());
     }
+}
 
 
 

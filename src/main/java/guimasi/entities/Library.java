@@ -3,6 +3,7 @@ package guimasi.entities;
 
 import org.apache.commons.io.FileUtils;
 
+import java.awt.print.Paper;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -155,6 +156,28 @@ public class Library {
         return this.Library.stream().filter(element -> element instanceof Magazine)
                 .collect(Collectors.groupingBy( magazine -> ((Magazine) magazine).getPeriodicity()));
     }
+
+    public List<PaperElement> sortByOldestElement () {
+        System.out.println("Ordinati dal più vecchio al più recente:");
+        return this.Library.stream().sorted(Comparator.comparing(PaperElement::getYear)).toList();
+    }
+
+    public List<PaperElement> sortByMoreRecentElement () {
+        System.out.println("Ordinati dal più recente al più vecchio:");
+        return this.Library.stream().sorted(Comparator.comparing(PaperElement::getYear).reversed()).toList();
+    }
+
+    public List<PaperElement> sortByAlphabeticalOrder () {
+        System.out.println("Ordinati in ordine alfabetico:");
+        return this.Library.stream().sorted(Comparator.comparing(PaperElement::getTitle)).toList();
+    }
+
+    public int totalPages () {
+        System.out.println("Totale delle pagine di tutti gli elementi:");
+        return this.Library.stream().mapToInt(PaperElement::getNumberOfPages).sum();
+
+    }
+
 
 
     @Override
